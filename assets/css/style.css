@@ -1,13 +1,4 @@
-/*
- * Theme Name: 
- * Theme URI: 
- * Author: Milan Savov
- * Author URI/Mail: milan.savov@gmail.com
- * Version: 1.0
- * */
 
-/* FONT
-================================================== */
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?37927580');
@@ -38,17 +29,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
  
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
-.icon-gplus:before { content: '\f0d5'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-up:before { content: '\f176'; } /* '' */
+.icon-twitter:before { content: '\f099'; } 
+.icon-facebook:before { content: '\f09a'; } 
+.icon-gplus:before { content: '\f0d5'; } 
+.icon-linkedin:before { content: '\f0e1'; } 
+.icon-linkedin:before { content: '\f0e1'; } 
+.icon-up:before { content: '\f176'; } 
 
-/* CUSTOM RESETS
-================================================== */
-a {
-    transition: color 0.25s ease-in-out;
+
+a {    transition: color 0.25s ease-in-out;
     -moz-transition: color 0.25s ease-in-out;
     -webkit-transition: color 0.25s ease-in-out;
     -o-transition: color 0.25s ease-in-out;
@@ -65,7 +54,7 @@ h4 {
     font-size: 30px;
 }
 
-/* Buttons */ 
+
 .btn {
     min-width: 145px;
     line-height: 50px;
@@ -130,8 +119,7 @@ textarea {
     font-size: 16px;
 }
 
-/* LAYOUT
-================================================== */
+
 html, body {
     width: 100%;
     height: 100%;
@@ -155,13 +143,11 @@ html, body {
     display: none;
 }
 
-/* Background-color */
+
 .gray-bg {
     background-color: #e1e1e1;
 }
 
-/* HEADER
-================================================== */
 .site-header {
     position: fixed;
     top: 0;
@@ -174,7 +160,6 @@ html, body {
     padding-bottom: 2px;
 }
 
-/* Navigation */
 .navbar-nav > li > a {
     padding: 5px 0;
     font-weight: 600;
@@ -208,8 +193,6 @@ html, body {
     background-color: transparent;
 }
 
-/* HERO
-================================================== */
 .hero { 
     background: url(../img/hero.jpg) no-repeat center / cover; 
     height: 100%;
@@ -257,15 +240,13 @@ html, body {
     height: 600px;
 }
 
-/* SITEMAIN
-================================================== */
 .site-main {
     position: relative;
     margin-bottom: 100px;
     background-color: #fff;
     z-index: 1;
 }
-/* site-section */
+
 .site-section {
    padding-top: 120px;
 }
@@ -285,7 +266,6 @@ html, body {
     margin-bottom: 35px;
 }
 
-/* Section: Skills */
 .section-skills {
     padding-bottom: 120px;
 }
@@ -312,7 +292,6 @@ html, body {
     background-color: #212121;  
 }
 
-/* Section: Services */
 .section-services {
     position: relative;
     padding-top: 220px;
@@ -358,7 +337,6 @@ html, body {
     margin-bottom: 0;
 }
 
-/* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
 }
@@ -368,6 +346,7 @@ html, body {
     margin-bottom: 30px;
     position: relative;
 }
+
 
 .section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
     margin-bottom: 0;
@@ -386,10 +365,12 @@ html, body {
     -webkit-transition: background-color 0.25s ease-in-out;
     -o-transition: background-color 0.25s ease-in-out;
     -ms-transition: background-color 0.25s ease-in-out;
+    
 }
 
 .portfolio-item:hover:before{
     background-color: rgba(33,33,33,0.6);
+    
 }
 
 .portfolio-item-info {
@@ -403,11 +384,13 @@ html, body {
     -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
     -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
     -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    
 }
 
 .portfolio-item:hover .portfolio-item-info {
     left: 50px;
     opacity: 1;
+    
 }
 
 .portfolio-item-info h4 {
@@ -438,7 +421,6 @@ html, body {
     margin-top: 10px;
 }
 
-/* Modal */
 .modal {
     z-index: 9999;
 }
@@ -484,7 +466,6 @@ html, body {
     text-align: center;
 }
 
-/* Section: Counters */
 .section-counters {
     background: url(../img/counters-bg.jpg) no-repeat fixed center / cover;
     width: 100%;
@@ -515,7 +496,6 @@ html, body {
     line-height: 0.8;
 }
 
-/* Section: Form*/
 .section-form {
     padding-bottom: 120px;
 }
@@ -524,8 +504,6 @@ html, body {
     margin-top: 40px;
 }
 
-/* FOOTER
-================================================== */
 .site-footer {
     position: fixed;
     bottom: 0;

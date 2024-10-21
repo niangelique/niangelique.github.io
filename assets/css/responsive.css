@@ -1,16 +1,11 @@
-/*==========  Non-Mobile First Method  ==========*/
 
-/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
-	/* HEADER
-	================================================== */
-	/* Navigation */
+	
 	.navbar-nav > li + li > a {
 	    margin-left: 30px;
 	}
 
-	/* HERO
-	================================================== */
+	
 	.hero {
 		min-height: 600px;
 	}
@@ -19,23 +14,19 @@
 		height: 500px;
 	}
 
-	/* SITEMAIN
-	================================================== */
-	/* Modal */
+	
 	.modal-header {
 		height: 400px;
 	}
 }
 
-/* Medium Devices, Desktops */
+
 @media only screen and (max-width : 991px) {
-	/* CUSTOM RESETS
-	================================================== */
+	
 	h4 {
 		font-size: 24px;
 	}
 
-	/* Buttons */ 
 	.btn {
 	    min-width: 120px;
 	    line-height: 40px;
@@ -43,9 +34,7 @@
 	    font-size: 14px;
 	} 
 
-	/* HEADER
-	================================================== */
-	/* Navigation */
+
 	.navbar-nav > li > a {
 		font-size: 14px;
 	}
@@ -54,8 +43,7 @@
 	    margin-left: 20px;
 	}
 
-	/* HERO
-	================================================== */
+
 	.hero h1 {
 		font-size: 38px
 	}
@@ -68,8 +56,6 @@
 		height: 420px;
 	}
 
-	/* SITEMAIN
-	================================================== */
 	.site-section {
 		padding-top: 90px;
 	}
@@ -85,7 +71,6 @@
 		font-size: 32px
 	}
 
-	/* Section: Skills */
 	.section-skills .col-md-4 + .col-md-4,
 	.skill + .skill {
 		margin-top: 20px;
@@ -95,7 +80,6 @@
 		font-size: 22px;
 	}
 
-	/* Section: Services */
 	.section-services{
 		padding-top: 200px;
 	}
@@ -108,7 +92,6 @@
 		font-size: 22px; 
 	}
 
-	/* Section: Portfolio */
 	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
 	    margin-bottom: 30px;
 	}
@@ -117,7 +100,6 @@
 	    margin-bottom: 0;
 	}
 
-	/* Section: Counters */
 	.section-counters {
 		padding: 70px 0;
 	}
@@ -126,39 +108,34 @@
 		font-size: 80px;
 	}
 
-	/* Modal */
+	
 	.modal-header {
 		height: 350px;
 	}
 }
 
-/* Small Devices, Tablets */
+
 @media only screen and (max-width : 767px) {
-	/* CUSTOM RESETS
-	================================================== */
+	
 	h4 {
 		font-size: 20px;
 	}
 
-	/* Buttons */ 
 	.btn {
 	    min-width: 100px;
 	    line-height: 30px;
 	    padding: 0 20px;
 	} 
 
-	/* Input fields */
 	.form-control {
 	 	margin-top: 25px;
 	}
 
-	/* Margin and Paddings Resets */
+
 	.mt-x-0 {
 	    margin-top: 0;
 	}
 
-	/* HEADER
-	================================================== */
 	.site-logo {
 		padding-left: 15px;
 	}
@@ -166,8 +143,6 @@
 	.site-logo img {
 		height: 22px;
 	}
-
-	/* Navigation */
 	.navbar-toggle {
 	    margin: 0 15px 0 0;
 	    padding: 5px 0;
@@ -291,14 +266,12 @@
 		transform: translateX(-30%);
 	}
 
-	/* HERO
-	================================================== */
 	.hero .col-md-6:first-child {
 		top: 30%;
 	}
 
 	.hero h1 {
-		font-size: 32px
+		font-size: 32px;
 		margin-bottom: 10px;
 	}
 
@@ -311,8 +284,7 @@
 		height: 360px
 	}
 
-	/* SITEMAIN
-	================================================== */
+	
 	.site-main {
 		margin-bottom: 140px;
 	}
@@ -341,13 +313,11 @@
 	    margin-bottom: 25px;
 	}
 
-	/* Section: Skills */
 	.skill h4 {
 	    text-transform: uppercase;
 	    margin-bottom: 10px;
 	}
 
-	/* Section: Services */
 	.section-services {
 		padding-top: 180px;
 	}
@@ -356,7 +326,6 @@
 		margin: 10px 0;
 	}
 
-	/* Section: Portfolio */
 	.section-portfolio .col-xs-6:nth-child(odd) {
 		padding-right: 7.5px;
 	}
@@ -379,47 +348,36 @@
 		padding: 40px 20px;
 	}
 
-	/* Section: Counters */
 	.section-counters .col-xs-12 + .col-xs-12 {
 		margin-top: 25px;
 	}
 
-	/* Section: Form */
 	.section-form .btn {
 		margin-top: 25px;
 	}
 
-	/* Modal */
 	.modal-header {
 		height: 250px;
 	}
 
-	/* FOOTER
-	================================================== */
 	.site-footer .col-xs-12 {
 		text-align: center;
 	}
 }
 
-/* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 479px) {
 	.visible-xxs {
 		display: block;
 	}
 
-	/* HERO
-	================================================== */
 	.hero .visible-xxs + .btn {
 		margin-top: 10px;
 	}
 
-	/* SITEMAIN
-	================================================== */
 	.site-main {
 		margin-bottom: 180px;
 	}
 
-	/* Section: Portfolio */
 	.section-portfolio .col-xs-6 {
 		width: 100%;
 		padding: 0;
@@ -442,8 +400,6 @@
 		margin-top: 25px;
 	}
 
-	/* FOOTER
-	================================================== */
 	.site-footer .row {
 		display:flex;
 		flex-direction: column-reverse;	
