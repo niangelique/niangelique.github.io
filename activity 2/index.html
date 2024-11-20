@@ -21,11 +21,11 @@
     <nav class="page-navbar" data-spy="affix" data-offset-top="10">
         <ul class="nav-navbar container">
 
-            <li class="nav-item"><a href="#" class="nav-link">Explore</a></li>
+            <li class="nav-item"><a href="#explore" class="nav-link">Explore</a></li>
             <li class="nav-item"><a
                     href="https://www.google.com/maps/place/Amsterdam,+Netherlands/@52.3547418,4.8215605,12z/data=!3m1!4b1!4m6!3m5!1s0x47c63fb5949a7755:0x6600fd4cb7c0af8d!8m2!3d52.3675734!4d4.9041389!16zL20vMGszcA?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D"
                     class="nav-link"><img src="assets/imgs/placeholder.svg"></a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Attractions</a></li>
+            <li class="nav-item"><a href="#attractions" class="nav-link">Attractions</a></li>
 
 
             </div>
@@ -67,7 +67,8 @@
     </div><!-- end of modal -->
 
     <!-- page container -->
-    <div class="container page-container">
+     
+    <div class="container page-container" id="explore">
         <div class="col-md-10 col-lg-8 m-auto">
             <h6 class="title mb-4">Explore The City</h6>
             <p class="mb-5">Amsterdam, the capital of the Netherlands, is a vibrant and picturesque city known for its
@@ -123,9 +124,10 @@
                 </a>
             </div>
         </div><!-- end of row -->
+    </section>
 
-
-        <div class="col-md-10 col-lg-8 m-auto">
+    
+        <div class="col-md-10 col-lg-8 m-auto" id="attractions">
             <h6 class="title mb-4 mt-5 pt-5">Famous Attractions</h6>
             <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
@@ -203,44 +205,84 @@
                     </div>
                 </div>
                 <!-- row 4 -->
+
                 <div class="col-md-6">
-                    <img src="assets/imgs/blog-4.jpg" class="card-img" alt=" ">
+                    <a href="javascript:void(0)" onclick="toggleGallery(4)">
+                        <img src="assets/imgs/blog-4.jpg" alt="Main Image Group 3" class="main-image">
+                    </a>
                     <div class="card-body">
                         <h3 class="card-title">Herengracht Canal</h3>
                         <p>Herengracht is the most prestigious of Amsterdam’s three major canals, often referred to as
                             the "gentleman's canal." Walking along this canal gives you a glimpse into Amsterdam’s
                             Golden Age, with beautiful 17th-century homes lining the water.
-
                         </p>
                     </div>
-                    </a>
+                </div>
+
+                <!-- Gallery Modal -->
+                <div id="gallery" class="gallery">
+                    <span class="close" onclick="toggleGallery()">×</span>
+                    <div class="gallery-content">
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <img id="galleryImage" src="assets/imgs/blog-3.jpg" alt="Gallery Image">
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                </div>
+
+                
+            <!-- row 5 -->
+
+            <div class="col-md-6">
+                <a href="javascript:void(0)" onclick="toggleGallery(5)">
+                    <img src="assets/imgs/blog-5.jpg" alt="Main Image Group 3" class="main-image">
+                </a>
+                <div class="card-body">
+                    <h3 class="card-title">Windmills</h3>
+                    <p><p>No visit to the Netherlands is complete without a trip to see a traditional Dutch windmill.
+                        While Amsterdam itself has a few windmills, Molen Van Sloten in the west of the city is a
+                        favourite for its open access and history. climb the windmill for panoramic views of the
+                        Dutch countryside.</p>
                 </div>
             </div>
 
-            <div class="row mb-5">
-                <div class="col-md-6">
-                    <img src="assets/imgs/blog-5.jpg" class="card-img" alt=" ">
-                    <div class="card-body">
-                        <h3 class="card-title">Windmills</h3>
-                        <p>No visit to the Netherlands is complete without a trip to see a traditional Dutch windmill.
-                            While Amsterdam itself has a few windmills, Molen Van Sloten in the west of the city is a
-                            favourite for its open access and history. climb the windmill for panoramic views of the
-                            Dutch countryside.</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <img src="assets/imgs/blog-6.jpg" class="card-img" alt=" ">
-                    <div class="card-body">
-                        <h3 class="card-title">Oude Kerk</h3>
-                        <p>Amsterdam’s oldest building, the Oude Kerk (Old Church), is a stunning piece of mediaeval
-                            architecture located in the heart of the Red Light District. Its historic facade juxtaposed
-                            against the lively district makes for an intriguing photo op. Head inside to explore its
-                            Gothic interiors and admire the beautiful stained-glass windows.</p>
-                    </div>
-                    </a>
+            <!-- Gallery Modal -->
+            <div id="gallery" class="gallery">
+                <span class="close" onclick="toggleGallery()">×</span>
+                <div class="gallery-content">
+                    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                    <img id="galleryImage" src="assets/imgs/blog-5.jpg" alt="Gallery Image">
+                    <button class="next" onclick="changeImage(1)">&#10095;</button>
                 </div>
             </div>
+
+
+           <!-- row 6 -->
+
+            
+           <div class="col-md-6">
+            <a href="javascript:void(0)" onclick="toggleGallery(6)">
+                <img src="assets/imgs/blog-6.jpg" alt="Main Image Group 3" class="main-image">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">Oude Kerk</h3>
+                <p>Amsterdam’s oldest building, the Oude Kerk (Old Church), is a stunning piece of mediaeval
+                    architecture located in the heart of the Red Light District. Its historic facade juxtaposed
+                    against the lively district makes for an intriguing photo op. Head inside to explore its
+                    Gothic interiors and admire the beautiful stained-glass windows.</p>
+            </div>
+        </div>
+
+        <!-- Gallery Modal -->
+        <div id="gallery" class="gallery">
+            <span class="close" onclick="toggleGallery()">×</span>
+            <div class="gallery-content">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <img id="galleryImage" src="assets/imgs/blog-6.jpg" alt="Gallery Image">
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>
+   
+
 
 
             <a href="https://niangelique.github.io/">Back to Portfolio <i class="ti-angle-double-right angle"></i></a>
