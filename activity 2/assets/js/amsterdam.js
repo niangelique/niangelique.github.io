@@ -73,41 +73,104 @@ const imagesGroup3 = [
 
 ];
 
-let currentImageIndex = 0;  // Tracks the currently displayed image
-let currentGroup = 1;  // Default group is 1 (imagesGroup1)
+const imagesGroup4 = [
+    "assets/imgs/blog-4.jpg",
+    "assets/imgs/herengracht/1.jpg",
+    "assets/imgs/herengracht/2.jpg",
+    "assets/imgs/herengracht/3.jpg",
+    "assets/imgs/herengracht/4.jpg",
+    "assets/imgs/herengracht/5.jpg",
 
-// Function to toggle the gallery visibility and load the correct group of images
-function toggleGallery(group) {
+];
+
+const imagesGroup5 = [
+    "assets/imgs/blog-5.jpg",
+    "assets/imgs/windmill/1.jpg",
+    "assets/imgs/windmill/2.jpg",
+    "assets/imgs/windmill/3.jpg",
+    "assets/imgs/windmill/4.jpg",
+    "assets/imgs/windmill/5.jpg",
+
+];
+
+const imagesGroup6 = [
+    "assets/imgs/blog-6.jpg",
+    "assets/imgs/oude/1.jpg",
+    "assets/imgs/oude/2.jpg",
+    "assets/imgs/oude/3.jpg",
+    "assets/imgs/oude/4.jpg",
+    "assets/imgs/oude/5.jpg",
+
+];
+
+let currentImageIndex = 0;
+let currentGroup = 1;
+
+function toggleGallery(group = null) {
     const gallery = document.getElementById('gallery');
     const imageContainer = document.getElementById('galleryImage');
-    
-    // Update the current group
+
+    if (group === null) {
+        gallery.style.display = 'none';
+        return;
+    }
+
+    const allImageGroups = {
+        1: imagesGroup1,
+        2: imagesGroup2,
+        3: imagesGroup3,
+        4: imagesGroup4,
+        5: imagesGroup5,
+        6: imagesGroup6
+    };
+
+    if (!allImageGroups[group]) {
+        console.error(`Group ${group} does not exist.`);
+        return;
+    }
+
     currentGroup = group;
+    const images = allImageGroups[group];
 
-    // Choose the correct image group based on the group parameter
-    const images = group === 1 ? imagesGroup1 : (group === 2 ? imagesGroup2 : imagesGroup3);
-
-    // If the gallery is currently hidden, show it and display the first image from the selected group
     if (gallery.style.display === 'none' || gallery.style.display === '') {
-        currentImageIndex = 0;  // Reset to the first image when opening the gallery
-        imageContainer.src = images[currentImageIndex];  // Set the first image from the selected group
-        gallery.style.display = 'flex';  // Show the gallery (use flex to center the image)
-    } else {
-        gallery.style.display = 'none';  // Close the gallery
+        currentImageIndex = 0;
+        imageContainer.src = images[currentImageIndex];
+        gallery.style.display = 'flex';
     }
 }
 
-// Function to change the image in the gallery (next/prev)
 function changeImage(direction) {
-    // Use the correct image group based on the current group
-    const images = currentGroup === 1 ? imagesGroup1 : (currentGroup === 2 ? imagesGroup2 : imagesGroup3);
-    
+    const allImageGroups = {
+        1: imagesGroup1,
+        2: imagesGroup2,
+        3: imagesGroup3,
+        4: imagesGroup4,
+        5: imagesGroup5,
+        6: imagesGroup6
+    };
+
+    const images = allImageGroups[currentGroup];
+
+    if (!images || images.length === 0) {
+        console.error(`No images found for group ${currentGroup}.`);
+        return;
+    }
+
     currentImageIndex += direction;
 
-    // Loop back to the beginning or the end if we reach the limits
-    if (currentImageIndex < 0) currentImageIndex = images.length - 1;  // Loop back to the last image
-    if (currentImageIndex >= images.length) currentImageIndex = 0;  // Loop back to the first image
+    if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+    if (currentImageIndex >= images.length) currentImageIndex = 0;
 
     const imageContainer = document.getElementById('galleryImage');
-    imageContainer.src = images[currentImageIndex];  // Set the new image
+    imageContainer.src = images[currentImageIndex];
 }
+
+document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);  // Get the target section id
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
