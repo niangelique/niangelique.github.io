@@ -139,4 +139,10 @@ body.light-theme {
 		}
 	}
 
+	body.light-theme {
+		.card-title {
+		  color: $black !important; /* Set the card title color to black */
+		}
+	  }
+	  
 }
