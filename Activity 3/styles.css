@@ -24,7 +24,7 @@ html {
     position: relative;
     width: 100%;
     height: 400px; /* Default height */
-    background-image: url(../Midterms/images/wall.jpg); /* Add your image URL */
+    background-image: url(images/wall.jpg);
     background-size: cover; /* Ensures the background covers the section without stretching */
     background-position: center center; /* Keeps the background centered */
     background-attachment: fixed; /* Keeps the background fixed while scrolling (parallax effect) */
@@ -532,23 +532,23 @@ section {
 }
 
 #characters {
-    background-image: url(../Midterms/images/characters-bg.jpg);
+    background-image: url(images/characters-bg.jpg);
 }
 
 #episodes {
-    background-image: url(../Midterms/images/episodes-bg.jpg);
+    background-image: url(images/episodes-bg.jpg);
 }
 
 #locations {
-    background-image: url(../Midterms/images/locations-bg.jpg);
+    background-image: url(images/locations-bg.jpg);
 }
 
 #organizations {
-    background-image: url(../Midterms/images/oraganizations-bg.jpg);
+    background-image: url(images/oraganizations-bg.jpg);
 }
 
 #titans {
-    background-image: url(../Midterms/images/titans-bg.jpg);
+    background-image: url(images/titans-bg.jpg);
 }
 
 .up-button {
