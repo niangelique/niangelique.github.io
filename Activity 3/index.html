@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attack on Titan</title>
+  <link rel="icon" href="images/icon.png" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navigation Bar with Burger Icon -->
+    <nav class="navbar">
+      <div class="burger-icon" id="burger-icon">
+        &#9776; <!-- Burger icon (three horizontal lines) -->
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#episodes">Episodes</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#organizations">Organizations</a></li>
+        <li><a href="#titans">Titans</a></li>
+      </ul>
+
+      <div class="music-button" id="music-button">
+        🎧
+      </div>
+      <!-- Music Dropdown -->
+      <div class="music-dropdown" id="music-dropdown">
+        <ul>
+          <li><a href="#" class="music-link"
+              data-song="Season 1 - Official Opening Song - Crimson Bow and Arrow (TV size ver.).mp3">Theme
+              Song 1: Crimson Bow and Arrow</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 2 - Official Opening Song - Shinzou wo Sasageyo by Linked Horizon.mp3">Theme Song
+              2: Shinzou wo Sasageyo</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 3 - Official Opening Song Part 1 - Red Swan - 進撃の巨人 Official Lyric Video YOSHIKI feat. HYDE.mp3">Theme
+              Song 3: Red Swan</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 3 - Official Opening Song Part 2 - AMVShoukei To Shikabane No Michi  Shingeki No Kyojin.mp3">Theme
+              Song 4: Shingeki No Kyojin (AMV)</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 4 - Official Opening Song Part 1 - My WarFULL Version - Shinsei Kamattechan.mp3">Theme
+              Song 5: My War</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 4 - Official Opening Song Part 2 - SiM The Rumbling (OFFICIAL VIDEO).mp3">Theme
+              Song 6: The Rumbling</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Season 4 - Official Ending Song Part 2 - Ai Higuchi Akuma no Ko Anime Special Ver..mp3">Theme
+              Song 7: Akuma no Ko</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Barricades.mp3">Theme
+              Song 8: Barricades</a></li>
+          <li><a href="#" class="music-link"
+              data-song="Reluctant Heroes.mp3">Theme
+              Song 9: Reluctant Heroes</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="introduction">
+    <div class="hero">
+      <h1>Attack on Titan</h1>
+      <h4>Dwell in a world where humanity is surrounded by three enormous walls that protects them from Titans</h4>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Section -->
+  <section id="characters">
+    <h2>Characters</h2>
+    <div class="card-container" id="character-cards"></div>
+  </section>
+
+  <!-- Episode Section -->
+  <section id="episodes">
+    <h2>Episodes</h2>
+    <div class="card-container" id="episode-cards"></div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="locations">
+    <h2>Locations</h2>
+    <div class="card-container" id="location-cards"></div>
+  </section>
+
+  <!-- Organization Section -->
+  <section id="organizations">
+    <h2>Organizations</h2>
+    <div class="card-container" id="organization-cards"></div>
+  </section>
+
+  <!-- Titan Section -->
+  <section id="titans">
+    <h2>Titans</h2>
+    <div class="card-container" id="titan-cards"></div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modal-content">
+      <span class="close">&times;</span>
+      <!-- Modal Content will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- Mute Button -->
+  <div class="mute-button" id="mute-button">
+    🔊
+  </div>
+
+  <div class="up-button">↑</div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
