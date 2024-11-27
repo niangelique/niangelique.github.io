@@ -24,7 +24,7 @@ html {
     position: relative;
     width: 100%;
     height: 400px; /* Default height */
-    background-image: url(images/wall.jpg);
+    background-image: url(../Midterms/images/wall.jpg); /* Add your image URL */
     background-size: cover; /* Ensures the background covers the section without stretching */
     background-position: center center; /* Keeps the background centered */
     background-attachment: fixed; /* Keeps the background fixed while scrolling (parallax effect) */
@@ -215,7 +215,7 @@ h4 {
     color: #000000;
 }
 
-
+/* Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -232,30 +232,27 @@ h4 {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(100% / 7 - 10px); 
-    margin: 10px 0; }
+    width: calc(100% / 7 - 10px); /* Ensures six cards fit per row with spacing */
+    margin: 10px 0; /* Adds vertical spacing between rows */
+}
 
 @media (max-width: 1200px) {
     .card {
-        width: calc(100% / 4 - 10px); 
-        
+        width: calc(100% / 4 - 10px); /* Four cards per row */
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        width: calc(100% / 2 - 10px);
-        
-         
+        width: calc(100% / 2 - 10px); /* Two cards per row */
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
     .card {
-        width: 100%; 
-        
+        width: 100%; /* One card per row */
     }
-} 
+}
 
 .card:hover {
     transform: scale(1.05);
@@ -527,28 +524,27 @@ section {
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
-    padding: 30px;
     /* Ensure text stays above background */
 }
 
 #characters {
-    background-image: url(images/characters-bg.jpg);
+    background-image: url(../Midterms/images/characters-bg.jpg);
 }
 
 #episodes {
-    background-image: url(images/episodes-bg.jpg);
+    background-image: url(../Midterms/images/episodes-bg.jpg);
 }
 
 #locations {
-    background-image: url(images/locations-bg.jpg);
+    background-image: url(../Midterms/images/locations-bg.jpg);
 }
 
 #organizations {
-    background-image: url(images/oraganizations-bg.jpg);
+    background-image: url(../Midterms/images/oraganizations-bg.jpg);
 }
 
 #titans {
-    background-image: url(images/titans-bg.jpg);
+    background-image: url(../Midterms/images/titans-bg.jpg);
 }
 
 .up-button {
