@@ -1,0 +1,576 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2d2d2d;
+    /* Dark gray background */
+    color: #000000;
+    /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    /* Apply smooth transitions for all elements */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Default height */
+    background-image: url(../Midterms/images/wall.jpg); /* Add your image URL */
+    background-size: cover; /* Ensures the background covers the section without stretching */
+    background-position: center center; /* Keeps the background centered */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling (parallax effect) */
+    display: flex;
+    flex-direction: column; /* Stack text and search bar vertically */
+    justify-content: space-between; /* Distribute items between top, center, and bottom */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box; /* Prevent any padding from causing overflow */
+    overflow: hidden;
+}
+
+/* Title (h1) at the top */
+.hero h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin-top: 165px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    padding: 0 10px; /* Ensure padding doesn't cause overflow */
+}
+
+/* Description (h4) in the middle */
+.hero h4 {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: normal;
+    margin-top: 15px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1s;
+    padding: 0 10px; /* Ensure padding doesn't cause overflow */
+}
+
+/* Search Bar Container */
+.hero .search-container {
+    display: flex;
+    justify-content: center; /* Center the search bar horizontally */
+    margin-top: auto; /* Push the search bar to the bottom */
+    margin-bottom: 20px; /* Space at the bottom */
+}
+
+/* Search Bar Styling */
+.hero #search-bar {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ffcc00;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Maximum width for larger screens */
+    transition: border 0.3s ease;
+    margin: 0 auto; /* Center the search bar by setting the margin to auto */
+}
+
+/* Focus Effect */
+.hero #search-bar:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero {
+        height: 350px; /* Adjust hero height for smaller desktops */
+    }
+
+    .hero h1 {
+        margin-top: 120px;
+        font-size: 2.5rem; /* Slightly smaller title on larger tablets and desktops */
+    }
+
+    .hero h4 {
+        font-size: 1.1rem; /* Adjust description font size */
+    }
+
+    .hero #search-bar {
+        width: 90%; /* Search bar takes up more space on medium-sized screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 300px; /* Slightly reduce the height for tablets */
+    }
+
+    .hero h1 {
+        margin-top: 100px;
+        font-size: 2.2rem; /* Smaller title for tablets */
+    }
+
+    .hero h4 {
+        font-size: 1rem; /* Adjust description font size */
+    }
+
+    .hero #search-bar {
+        width: 90%; /* Search bar takes up more space on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 250px; /* Further reduce height for mobile */
+    }
+
+    .hero h1 {
+        margin-top: 80px;
+        font-size: 2rem; /* Smaller title for mobile */
+    }
+
+    .hero h4 {
+        font-size: 0.9rem; /* Smaller description font */
+    }
+
+    .hero #search-bar {
+        width: 90%; /* Search bar takes up more space on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 220px; /* Adjust height for very small screens */
+    }
+
+    .hero h1 {
+        margin-top: 50px;
+        font-size: 1.8rem; /* Even smaller title for very small screens */
+    }
+
+    .hero h4 {
+        font-size: 0.8rem; /* Adjust description for very small screens */
+    }
+
+    .hero #search-bar {
+        width: 95%; /* Max width for very small screens */
+    }
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #050505;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+h3 {
+    font-family: 'Impact', sans-serif;
+    /* Bold, strong font */
+    color: #000000;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 20px 0;
+    text-transform: capitalize;
+    text-align: center;
+    color: #000000;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(100% / 7 - 10px); /* Ensures six cards fit per row with spacing */
+    margin: 10px 0; /* Adds vertical spacing between rows */
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(100% / 4 - 10px); /* Four cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% / 2 - 10px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* One card per row */
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #ffcc00;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    position: fixed; 
+    top: 100px;
+    left: 0;
+    width: 250px; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #333333;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-100%); /* Start outside of the viewport */
+    transition: all 0.5s ease;
+    padding: 20px; /* Adjust padding for spacing */
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+    z-index: 9999;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0); /* Slide into view */
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.burger-icon {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Music Button Styling */
+.music-button {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Initial state of the music dropdown (hidden) */
+.music-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.music-dropdown.active {
+    display: block;
+}
+
+.music-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.music-dropdown ul li {
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.music-dropdown ul li:hover {
+    background-color: #444;
+}
+
+.music-dropdown ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.music-dropdown ul li a:hover {
+    color: #ffcc00;
+}
+
+/* For screens smaller than 768px, keep the same behavior (hidden links, toggle with burger) */
+@media (max-width: 768px) {
+    .burger-icon {
+        display: block;
+    }
+
+    .music-button {
+        font-size: 25px;
+    }
+}
+
+/* For larger screens (desktop), keep the links hidden under the burger menu */
+@media (min-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Always hidden by default on larger screens */
+    }
+}
+
+/* Mute Button Styling */
+.mute-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mute-button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+/* Search Bar Styling */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-bar::placeholder {
+    color: #888;
+}
+
+/* Section Styles */
+section {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    /* Ensure text stays above background */
+}
+
+#characters {
+    background-image: url(../Midterms/images/characters-bg.jpg);
+}
+
+#episodes {
+    background-image: url(../Midterms/images/episodes-bg.jpg);
+}
+
+#locations {
+    background-image: url(../Midterms/images/locations-bg.jpg);
+}
+
+#organizations {
+    background-image: url(../Midterms/images/oraganizations-bg.jpg);
+}
+
+#titans {
+    background-image: url(../Midterms/images/titans-bg.jpg);
+}
+
+.up-button {
+    position: fixed;
+    bottom: 50px; /* Adjust distance from the bottom */
+    left: 50%; /* Align the button to the center horizontally */
+    transform: translateX(-50%); /* Center the button */
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.2s ease;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.up-button:hover {
+    transform: translateX(-50%) translateY(-10px); /* Moves the button upwards on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
+}
+
+.up-button.hidden {
+    display: none; /* Hide button when not needed */
+}
